@@ -23,4 +23,4 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 
 config-refresh-message: "Config Refresh Done 01"
-environment-value: "default"
+environment-value: "dev"
