@@ -56,6 +56,14 @@ management:
 
 logging:
   level:
-    root: INFO
+    # root: INFO
+    com.ritesh.microservice.service.AddressServiceClient: DEBUG
   pattern:
     correlation: "traceId=%X{traceId} spanId=%X{spanId}"
+
+# For Testing
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL
