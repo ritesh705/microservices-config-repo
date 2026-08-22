@@ -55,5 +55,7 @@ management:
         enabled: true
 
 logging:
+  level:
+    root: INFO
   pattern:
     correlation: "traceId=%X{traceId} spanId=%X{spanId}"
