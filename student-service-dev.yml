@@ -1,9 +1,8 @@
 logging:
-#  level:
-#    root: DEBUG
-  logging:
-    pattern:
-      level: "%5p [traceId=%X{traceId:-}, spanId=%X{spanId:-}]"
+  level:
+    root: DEBUG
+  pattern:
+    level: "%5p [traceId=%X{traceId:-}, spanId=%X{spanId:-}]"
 
 spring:
   application:
