@@ -1,6 +1,6 @@
 logging:
-  level:
-    root: DEBUG
+#  level:
+#    root: DEBUG
   logging:
     pattern:
       level: "%5p [traceId=%X{traceId:-}, spanId=%X{spanId:-}]"
