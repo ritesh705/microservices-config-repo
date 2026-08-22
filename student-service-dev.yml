@@ -1,6 +1,9 @@
 logging:
   level:
     root: DEBUG
+  logging:
+    pattern:
+      level: "%5p [traceId=%X{traceId:-}, spanId=%X{spanId:-}]"
 
 spring:
   application:
@@ -36,3 +39,12 @@ resilience4j:
         waitDurationInOpenState: 30s
         permittedNumberOfCallsInHalfOpenState: 5
         automaticTransitionFromOpenToHalfOpenEnabled: true
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0   # capture 100% of requests in dev
+  otlp:
+    tracing:
+      endpoint: http://localhost:4317   # Jaeger OTLP gRPC endpoint
