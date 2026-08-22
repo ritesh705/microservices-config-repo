@@ -40,13 +40,17 @@ resilience4j:
         automaticTransitionFromOpenToHalfOpenEnabled: true
 
 management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
   tracing:
     enabled: true
     sampling:
       probability: 1.0   # capture 100% of requests in dev
-#  otlp:
-#    tracing:
-#      endpoint: http://localhost:4318/v1/traces   # Jaeger OTLP HTTP endpoint
-  zipkin:
-    tracing:
-      endpoint: http://localhost:9411/api/v2/spans
+    #  otlp:
+    #    tracing:
+    #      endpoint: http://localhost:4318/v1/traces   # Jaeger OTLP HTTP endpoint
+    zipkin:
+      tracing:
+        endpoint: http://localhost:9411/api/v2/spans
