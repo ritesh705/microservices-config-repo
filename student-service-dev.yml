@@ -53,5 +53,7 @@ management:
         enabled: true
 
 logging:
-  level:
-    root: DEBUG
+#  level:
+#    root: DEBUG
+  pattern:
+    correlation: "traceId=%X{traceId} spanId=%X{spanId}"
