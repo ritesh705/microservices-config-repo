@@ -63,7 +63,7 @@ logging:
     # root: INFO
     com.ritesh.microservice.service.AddressServiceClient: DEBUG
   pattern:
-    correlation: "traceId=%X{traceId} spanId=%X{spanId}"
+    correlation: "[traceId=%X{traceId:-} spanId=%X{spanId:-}] "
 
 # For Testing
 feign:
