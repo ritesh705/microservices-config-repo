@@ -45,9 +45,9 @@ management:
     otlp:
       tracing:
         endpoint: http://localhost:4318/v1/traces   # Jaeger OTLP HTTP endpoint
-    zipkin:
-      tracing:
-        endpoint: http://localhost:9411/api/v2/spans
+#    zipkin:
+#      tracing:
+#        endpoint: http://localhost:9411/api/v2/spans
 
 logging:
   level:
